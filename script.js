@@ -1,3 +1,4 @@
+// löscht alle e aus dem Text
 export function aufgabe01(args) {
   const input = args
   const result = [] 
@@ -22,7 +23,7 @@ export function aufgabe02(args){
     } 
     return result.join("")
   }
-
+// gibt an wie viele e sich im Text befinden
 export function aufgabe03(args){
     const input = args
     const result = [] 
@@ -42,7 +43,7 @@ export function aufgabe03(args){
 
   
 
-
+// Zählt die Anzahl von Wörter im Text
   export function aufgabe04 (args) {
     const input = args
     const result = []
@@ -55,7 +56,7 @@ export function aufgabe03(args){
 }
     return count
   }
- 
+ //testet ob es ein Großbuchstabe gibt
   export function aufgabe05 (args) {
     const input = args
  
@@ -104,12 +105,12 @@ export function aufgabe03(args){
               }
                 return false
               }
- 
+ //macht aus e ein s
       export function aufgabe08(args) {
         const input = args
         const result = []
      
-        for (let i = 0; i < input.length; i++) {
+        for (let i = 0; i < input.length; i++) {  
           const currentElement = input[i]
           if (currentElement === "e") {
            result.push("3")
@@ -136,8 +137,7 @@ export function aufgabe03(args){
       return false
   }
 
-
-
+//der ASCII code eines einzelnen Buchstaben wird angegeben
     export function aufgabe11 (args) {
       const input = args
     
@@ -148,9 +148,11 @@ export function aufgabe03(args){
       if (input.length === 1){
          return ascii
       }
-    }
+      }
+      return -1
+  }
     
-  
+  // testet ob die Funktion ein korrekter Hexencode ist
     export function aufgabe10 (args) {
       const input = args
      
@@ -175,7 +177,7 @@ export function aufgabe03(args){
     }
   
   
-  }
+  //such nach der Position des aller ersten e
     
     export function aufgabe12 (args) {
       const input = args
@@ -192,7 +194,7 @@ export function aufgabe03(args){
       }
       return -1
     }
-    
+    // es sucht nach dem letzten e in der Reihenfolge
     export function aufgabe13 (args) {
       const input = args
       const result = []
@@ -208,7 +210,7 @@ export function aufgabe03(args){
       }
       return -1
     }
-
+//die Position des dritten e wird bestimmt
     export function aufgabe14 (args) {
       const input = args
       const result = []
