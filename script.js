@@ -212,7 +212,7 @@ export function aufgabe03(args){
     export function aufgabe14 (args) {
       const input = args
       const result = []
-      let number = 0
+      let Zahl = 0
       
       
       for (let i = 0; i < input.length; i++) {
@@ -220,8 +220,8 @@ export function aufgabe03(args){
         const currentElement = input[i]
         
         if (currentElement === "e"){
-          number++
-        if (number === 3){
+          Zahl++
+        if (Zahl === 3){
           return i
         }
       }
