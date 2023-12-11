@@ -246,4 +246,32 @@ export function aufgabe03(args){
       }
       
       return result.join("")
+
+    }
+    //trenne sie es in zwei listen die erste endet wenn dieses Zeichen kommt$
+    export function aufgabe16 (args) {
+      const input = args
+      const result = []
+      let count = 0
+      
+
+
+
+
+
+      for (let i = 0; i < input.length; i++) {
+        const currentElement = input[i]
+      if (count === 0 && currentElement === "$" && i+2 > input.length) {
+      result.push("")
+      count++
+      }
+      else if (currentElement === "$" && count === 0) {
+      result.push(",")
+      count++
+      }
+      else {
+        result.push(currentElement)
+      }
+    }
+    return result.join("")
     }
