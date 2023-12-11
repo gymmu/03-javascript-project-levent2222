@@ -301,3 +301,9 @@ export function aufgabe03(args){
       }
       return list1.join("")  + list2.join("") + list3.join("")
     }
+  //ich habe hier die ai getest mein Promt war :Schreiben Sie folgende Ausgabe: Sie heissen name und sind alter Jahre alt, wobei name und alter durch Eingaben eingesetzt werden.
+    name = input("Geben Sie Ihren Namen ein: ")
+alter = input("Geben Sie Ihr Alter ein: ")
+
+ausgabe = "Sie heißen " + name + " und sind " + alter + " Jahre alt."
+print(ausgabe)
