@@ -230,4 +230,20 @@ export function aufgabe03(args){
       }
       return -1
     }
-
+//es sucht nach dem ersten leerzeichen
+    export function aufgabe15 (args) {
+      const input = args
+      const result = []
+      
+      for (let i = 0; i < input.length; i++) {
+        const currentElement = input[i]
+        if (currentElement === " ") {
+          //bricht einen loop ab
+          break
+        } else {
+          result.push(currentElement)
+        }
+      }
+      
+      return result.join("")
+    }
