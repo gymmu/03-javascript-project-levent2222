@@ -13,7 +13,7 @@ export function aufgabe01(args) {
   }
   return result.join("")
   }
-  
+  // gibt den Text in Grossbuchstaben an
 export function aufgabe02(args){
     const input = args
     const result = [] 
@@ -56,20 +56,20 @@ export function aufgabe03(args){
 }
     return count
   }
- //testet ob es ein Großbuchstabe gibt
+ //testet ob es ein Grossbuchstabe gibt
   export function aufgabe05 (args) {
     const input = args
  
     for (let i =0; i < input.length; i++) {
       const ascii = input[i].charCodeAt (0)
-         
+        // Ist ein Buchstabe 
       if (65 <= ascii && ascii <= 90) {
         return true
         }
         }
         return false
       }
- 
+ // Testet ob es ein Sonderzeichen gibt
       export function aufgabe06 (args) {
         const input = args
  
@@ -230,7 +230,7 @@ export function aufgabe03(args){
       }
       return -1
     }
-//es sucht nach dem ersten leerzeichen
+//es sucht nach dem ersten leerzeichen und liesst nur bsi dort ab
     export function aufgabe15 (args) {
       const input = args
       const result = []
@@ -248,7 +248,7 @@ export function aufgabe03(args){
       return result.join("")
 
     }
-    //trenne sie es in zwei listen die erste endet wenn dieses Zeichen kommt$
+    //trenne sie es in zwei listen die erste endet wenn dieses Zeichen kommt=$
     export function aufgabe16 (args) {
       const input = args
       const result = []
@@ -301,9 +301,46 @@ export function aufgabe03(args){
       }
       return list1.join("")  + list2.join("") + list3.join("")
     }
-  //ich habe hier die ai getest mein Promt war :Schreiben Sie folgende Ausgabe: Sie heissen name und sind alter Jahre alt, wobei name und alter durch Eingaben eingesetzt werden.
-    name = input("Geben Sie Ihren Namen ein: ")
-alter = input("Geben Sie Ihr Alter ein: ")
+    //Algorithmus zum Sortieren von Elementen
+ 
+    export function aufgabe26 (args) {
+      const input = args
+      const list = input.split("")
+    
+      for (let i = 0; i < list.length - 1; i++) {
+        //Diese Schleife läuft so lange, bis sie die gesamte Liste durchgleich der Länge der Eingabe ist.
+        const currentElement = list[i]
+        const currentElement1 = list[i + 1]
+        if (currentElement.charCodeAt(0) > currentElement1.charCodeAt(0)) {
+          const tmp = list[i + 1]
+          list[i+1] = list[i]
+          list[i] = tmp
+          i = -1
+        //Der Loop startet danch neu
+        }
+      }
+      const result = list.join("")
+      return result
+    }
+    export function bubbleSort (args) {
+      
+      return result.join("")
+    }
+    export function bubbleSort (args) {
 
-ausgabe = "Sie heißen " + name + " und sind " + alter + " Jahre alt."
-print(ausgabe)
+      const text = args
+      const list = text.split("") // Damit wandeln wir den Text in eine Liste um, das brauchen wir wenn wir Elemente vertauschen möchten.
+      for (let i = 0; i < list.length - 1; i++) {
+        const currentElement = list[i]
+        const nextElement = list[i + 1]
+        if (currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
+          // Reihenfolge stimmt nicht, Elemente müssen getauscht werden.
+          const tmp = list[i + 1]
+          list[i + 1] = list[i]
+          list[i] = tmp
+          i = -1 // starte von vorne wenn etwas vertauscht wurde.
+        }
+      }
+      const result = list.join("")
+      return result
+      }
