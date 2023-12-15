@@ -322,10 +322,7 @@ export function aufgabe03(args){
       const result = list.join("")
       return result
     }
-    export function bubbleSort (args) {
-      
-      return result.join("")
-    }
+  
     export function bubbleSort (args) {
 
       const text = args
